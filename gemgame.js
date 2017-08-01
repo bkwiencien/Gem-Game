@@ -25,6 +25,7 @@ function initialize() {
  gem3.value = 0;
  gem4.value = 0;
  setUpGem1();
+ generateTargetScore();
 }
 function setUpGem1() {
  console.log("here 1");
@@ -39,3 +40,5 @@ function setUpGem4() {
  console.log("here 4");
 }
 
+function generateTargetScore() {
+}
