@@ -24,15 +24,26 @@ function initialize() {
  gem2.value = 0;
  gem3.value = 0;
  gem4.value = 0;
+ setValueOfGems();
 }
 function setValueOfGems() {
+  for (i=1;i<5;i++) {
+   var fncgToCall= " ";
+   //gem1();
+   fnctToCall = "gem"+ "()";
+   console.log(fnctToCall);
+  }
 }
 function gem1() {
+ console.log("here 1");
 }
 function gem2() {
+ console.log("here 2");
 }
 function gem3() {
+ console.log("here 3");
 }
 function gem4() {
+ console.log("here 4");
 }
 
