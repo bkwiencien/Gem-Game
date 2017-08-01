@@ -1,5 +1,9 @@
 var targetScore = 0;
 var currentScore = 0;
+var gem1 = {
+   name: "gem1",
+   value: 0
+}
 function initialize() {
  console.log("i started");
  targetScore = 0;
