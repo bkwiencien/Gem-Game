@@ -20,6 +20,10 @@ function initialize() {
  console.log("i started");
  targetScore = 0;
  currentScore = 0;
+ gem1.value = 0;
+ gem2.value = 0;
+ gem3.value = 0;
+ gem4.value = 0;
 }
 function setValueOfGems() {
 }
