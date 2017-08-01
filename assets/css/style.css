@@ -1,4 +1,9 @@
+#mainjumbotron {
+width 200px;
+backghround-color: blue;
+}
 #section1{
+width: 29%;
 background-color: green;
 height: 100px;
 width 50px;
@@ -6,6 +11,7 @@ color: black;
 }
 #section2{
 background-color: green;
+width: 29%;
 height: 50px;
 width 50px;
 color: white;
