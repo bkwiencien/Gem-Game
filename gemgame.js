@@ -5,15 +5,15 @@ var gem1 = {
    value: 0
 }
 var gem2 = {
-   name: "gem1",
+   name: "gem2",
    value: 0
 }
 var gem3 = {
-   name: "gem1",
+   name: "gem3",
    value: 0
 }
 var gem4 = {
-   name: "gem1",
+   name: "gem4",
    value: 0
 }
 function initialize() {
@@ -24,26 +24,18 @@ function initialize() {
  gem2.value = 0;
  gem3.value = 0;
  gem4.value = 0;
- setValueOfGems();
+ setUpGem1();
 }
-function setValueOfGems() {
-  for (i=1;i<5;i++) {
-   var fncgToCall= " ";
-   //gem1();
-   fnctToCall = "gem"+ "()";
-   console.log(fnctToCall);
-  }
-}
-function gem1() {
+function setUpGem1() {
  console.log("here 1");
 }
-function gem2() {
+function setUoGem2() {
  console.log("here 2");
 }
-function gem3() {
+function setUpGem3() {
  console.log("here 3");
 }
-function gem4() {
+function setUpGem4() {
  console.log("here 4");
 }
 
