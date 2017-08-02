@@ -69,19 +69,35 @@ function process1() {
   console.log("process1 called");
   currentScore = currentScore + gem1.value;
   $("#totalscore").html("Your total score is " + currentScore);
+  assesTheGame();
 }
 function process2() {
   console.log("process2 called");
   currentScore = currentScore + gem2.value;
   $("#totalscore").html("Your total score is " + currentScore);
+  assesTheGame();
 }
 function process3() {
   console.log("process3 called");
   currentScore = currentScore + gem3.value;
   $("#totalscore").html("Your total score is " + currentScore);
+  assesTheGame();
 }
 function process4() {
   console.log("process4 called");
   currentScore = currentScore + gem4.value;
   $("#totalscore").html("Your total score is " + currentScore);
+  assesTheGame();
+}
+function assesTheGame() {
+ if (currentScore == targetScore) {
+   numbWins++;
+   $("#wins").html("wins " + numbWins);
+   initialize();
+ }
+ if (currentScore > targetScore) {
+   numbLoses++;
+   $("#loses").html("loses " + numbLoses);
+   initialize();
+ }
 }
