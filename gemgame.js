@@ -19,7 +19,6 @@ var gem4 = {
    value: 0
 }
 function initialize() {
- console.log("i started");
  targetScore = 0;
  currentScore = 0;
  gem1.value = 0;
@@ -30,7 +29,11 @@ function initialize() {
  generateTargetScore();
 }
 function setUpGem1() {
+// Each crystal should have a random hidden value between 1 - 12.
  console.log("here 1");
+ var tempnum = Math.round(Math.random()*10);
+ gem1.value = tempnum  % 13;
+ console.log("gem1 has a value of " + gem1.value);
 }
 function setUpGem2() {
  console.log("here 2");
@@ -53,4 +56,7 @@ function generateTargetScore() {
     console.log("targetScore = " + targetScore);
     $("#target").html("target " + targetScore);
 
+}
+function process1() {
+  console.log("process1 called");
 }
