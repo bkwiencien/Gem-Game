@@ -44,4 +44,13 @@ function setUpGem4() {
 
 function generateTargetScore() {
 // The random number shown at the start of the game should be between 19 - 120.
+// $("#random-number").html(rnd);
+    var tempnum = Math.round(Math.random()*1000);
+    targetScore = tempnum % 120;
+    if (targetScore < 19 ) {
+      targetScore = 19;
+    }    
+    console.log("targetScore = " + targetScore);
+    $("#target").html("target " + targetScore);
+
 }
