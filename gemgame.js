@@ -29,6 +29,7 @@ function initialize() {
  setUpGem2();
  setUpGem3();
  setUpGem4();
+ resetYourScore();
  generateTargetScore();
 }
 function setUpGem1() {
@@ -90,14 +91,20 @@ function process4() {
   assesTheGame();
 }
 function assesTheGame() {
+ console.log("in assesTheGame");
  if (currentScore == targetScore) {
    numbWins++;
    $("#wins").html("wins " + numbWins);
    initialize();
  }
  if (currentScore > targetScore) {
+   console.log("in assesTheGame loser code");
    numbLoses++;
    $("#loses").html("loses " + numbLoses);
    initialize();
  }
+}
+function resetYourScore() {
+
+   $("yourscore").html("Your total score is " + currentScore);
 }
