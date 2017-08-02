@@ -35,6 +35,9 @@ function initialize() {
 function setUpGem1() {
 // Each crystal should have a random hidden value between 1 - 12.
  var tempnum = Math.round(Math.random()*10);
+ if (tempnum == 0) {
+   tempnum = 1;
+ }
  gem1.value = tempnum  % 13;
  console.log("gem1 has a value of " + gem1.value);
 }
