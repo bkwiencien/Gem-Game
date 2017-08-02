@@ -1,5 +1,7 @@
 var targetScore = 0;
 var currentScore = 0;
+var numbWins = 0;
+var numbLoses = 0;
 var gem1 = {
    name: "gem1",
    value: 0
@@ -30,7 +32,7 @@ function initialize() {
 function setUpGem1() {
  console.log("here 1");
 }
-function setUoGem2() {
+function setUpGem2() {
  console.log("here 2");
 }
 function setUpGem3() {
@@ -41,4 +43,5 @@ function setUpGem4() {
 }
 
 function generateTargetScore() {
+// The random number shown at the start of the game should be between 19 - 120.
 }
