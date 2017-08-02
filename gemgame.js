@@ -26,6 +26,9 @@ function initialize() {
  gem3.value = 0;
  gem4.value = 0;
  setUpGem1();
+ setUpGem2();
+ setUpGem3();
+ setUpGem4();
  generateTargetScore();
 }
 function setUpGem1() {
@@ -64,4 +67,13 @@ function generateTargetScore() {
 }
 function process1() {
   console.log("process1 called");
+}
+function process2() {
+  console.log("process2 called");
+}
+function process3() {
+  console.log("process3 called");
+}
+function process4() {
+  console.log("process4 called");
 }
