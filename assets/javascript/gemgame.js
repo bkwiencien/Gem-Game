@@ -50,57 +50,33 @@ function generateTargetScore() {
     $("#target").html("target " + targetScore);
 
 }
-function process() {
-  console.log("process called");
-  var valueToAdd = 0;
-  var  idWhoCalled = $(".gemprocess").attr("id");
-  console.log("idWhoCalled = " + idWhoCalled);
-  if(idWhoCalled == "gem1") {
-   var obj = gemArray[0];
-   valueToAdd = obj.value;
-  }
-  if (idWhoCalled == "gem2") {
-   var obj = gemArray[1];
-   valueToAdd = obj.value();
-  }
-  console.log("valueToAdd = " + valueToAdd);
-  currentScore = currentScore + valueToAdd;
-  $("#totalscore").html("Your total score is " + currentScore);
-  assesTheGame();
-}
 function process1() {
-  console.log("process1 called");
   currentScore = currentScore + gem1.value;
   $("#totalscore").html("Your total score is " + currentScore);
   assesTheGame();
 }
 function process2() {
-  console.log("process2 called");
   currentScore = currentScore + gem2.value;
   $("#totalscore").html("Your total score is " + currentScore);
   assesTheGame();
 }
 function process3() {
-  console.log("process3 called");
   currentScore = currentScore + gem3.value;
   $("#totalscore").html("Your total score is " + currentScore);
   assesTheGame();
 }
 function process4() {
-  console.log("process4 called");
   currentScore = currentScore + gem4.value;
   $("#totalscore").html("Your total score is " + currentScore);
   assesTheGame();
 }
 function assesTheGame() {
- console.log("in assesTheGame");
  if (currentScore == targetScore) {
    numbWins++;
    $("#wins").html("wins " + numbWins);
    initialize();
  }
  if (currentScore > targetScore) {
-   console.log("in assesTheGame loser code");
    numbLoses++;
    $("#loses").html("loses " + numbLoses);
    initialize();
