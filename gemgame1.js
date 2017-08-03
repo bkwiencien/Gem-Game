@@ -23,10 +23,6 @@ function initialize() {
  targetScore = 0;
  currentScore = 0;
 $("#totalscore").html("Your total score is " + currentScore);
- gem1.value = 0;
- gem2.value = 0;
- gem3.value = 0;
- gem4.value = 0;
  setUpAllGems();
  resetYourScore();
  generateTargetScore();
