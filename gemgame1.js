@@ -50,6 +50,24 @@ function generateTargetScore() {
     $("#target").html("target " + targetScore);
 
 }
+function process() {
+  console.log("process called");
+  var valueToAdd = 0;
+  var  idWhoCalled = $(".gemprocess").attr("id");
+  console.log("idWhoCalled = " + idWhoCalled);
+  if(idWhoCalled == "gem1") {
+   var obj = gemArray[0];
+   valueToAdd = obj.value;
+  }
+  if (idWhoCalled == "gem2") {
+   var obj = gemArray[1];
+   valueToAdd = obj.value();
+  }
+  console.log("valueToAdd = " + valueToAdd);
+  currentScore = currentScore + valueToAdd;
+  $("#totalscore").html("Your total score is " + currentScore);
+  assesTheGame();
+}
 function process1() {
   console.log("process1 called");
   currentScore = currentScore + gem1.value;
