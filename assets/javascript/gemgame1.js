@@ -53,9 +53,7 @@ function generateTargetScore() {
 }
 function process() {
   console.log("in process");
-  var whoCalled = $(".selection").attr("iam");
-  console.log(whoCalled);
-  var whoCalled = $(".selection").value("iam");
+  console.log($(".selection"));
 }
 function process1() {
   currentScore = currentScore + gem1.value;
@@ -94,7 +92,8 @@ function resetYourScore() {
    $("yourscore").html("Your total score is " + currentScore);
 }
 function setUpData() {
-  $("#gem").data("iam","gem1");
+  //$("#gem").data("iam","gem1");
+  $("#gem").data("gem1","iam");
   $("#gem").data("iam","gem2");
   $("#gem").data("iam","gem3");
   $("#gem").data("iam","gem4");
