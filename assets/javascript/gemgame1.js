@@ -26,6 +26,7 @@ $("#totalscore").html("Your total score is " + currentScore);
  setUpAllGems();
  resetYourScore();
  generateTargetScore();
+ setUpData();
 }
 function setUpAllGems() {
   for (i=0;i<gemArray.length;i++) {
@@ -85,4 +86,7 @@ function assesTheGame() {
 function resetYourScore() {
 
    $("yourscore").html("Your total score is " + currentScore);
+}
+function setUpData() {
+
 }
