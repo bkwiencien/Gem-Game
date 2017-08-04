@@ -88,5 +88,8 @@ function resetYourScore() {
    $("yourscore").html("Your total score is " + currentScore);
 }
 function setUpData() {
-
+  $("#gem1").data("gem1","gem1");
+  $("#gem2").data("gem2","gem2");
+  $("#gem3").data("gem3","gem3");
+  $("#gem4").data("gem4","gem4");
 }
