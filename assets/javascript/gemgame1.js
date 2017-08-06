@@ -66,26 +66,6 @@ function generateTargetScore() {
    $("#totalscore").html("Your total score is " + currentScore);
    assesTheGame()
    });
-function process1() {
-  currentScore = currentScore + gem1.value;
-  $("#totalscore").html("Your total score is " + currentScore);
-  assesTheGame();
-}
-function process2() {
-  currentScore = currentScore + gem2.value;
-  $("#totalscore").html("Your total score is " + currentScore);
-  assesTheGame();
-}
-function process3() {
-  currentScore = currentScore + gem3.value;
-  $("#totalscore").html("Your total score is " + currentScore);
-  assesTheGame();
-}
-function process4() {
-  currentScore = currentScore + gem4.value;
-  $("#totalscore").html("Your total score is " + currentScore);
-  assesTheGame();
-}
 function assesTheGame() {
  if (currentScore == targetScore) {
    numbWins++;

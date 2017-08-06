@@ -29,8 +29,11 @@ $("#totalscore").html("Your total score is " + currentScore);
 }
 function setUpAllGems() {
   for (i=0;i<gemArray.length;i++) {
-     var valueOfGem = generateGemValue();
-     gemArray[i].value = valueOfGem;
+    var tempnum = Math.round(Math.random()*10);
+    if (tempnum == 0) {
+      tempnum = 1;
+     }
+     gemArray[i].value = tempnum  % 13;
      console.log(gemArray[i].name + "  has a value of " + gemArray[i].value);
 
   }
@@ -47,25 +50,26 @@ function generateTargetScore() {
     $("#target").html("target " + targetScore);
 
 }
-  $(".selection").on("click",function() {
-   var gemToProcess = $(this).attr("id");
-   //console.log("gemToProcess " + gemToProcess);
-   console.log(gemToProcess);
-   if (gemToProcess == "gem1") {
-     currentScore = currentScore + gem1.value;
-   }
-   if (gemToProcess == "gem2") {
-     currentScore = currentScore + gem2.value;
-   }
-   if (gemToProcess == "gem3") {
-     currentScore = currentScore + gem3.value;
-   }
-   if (gemToProcess == "gem4") {
-     currentScore = currentScore + gem4.value;
-   }
-   $("#totalscore").html("Your total score is " + currentScore);
-   assesTheGame()
-   });
+function process1() {
+  currentScore = currentScore + gem1.value;
+  $("#totalscore").html("Your total score is " + currentScore);
+  assesTheGame();
+}
+function process2() {
+  currentScore = currentScore + gem2.value;
+  $("#totalscore").html("Your total score is " + currentScore);
+  assesTheGame();
+}
+function process3() {
+  currentScore = currentScore + gem3.value;
+  $("#totalscore").html("Your total score is " + currentScore);
+  assesTheGame();
+}
+function process4() {
+  currentScore = currentScore + gem4.value;
+  $("#totalscore").html("Your total score is " + currentScore);
+  assesTheGame();
+}
 function assesTheGame() {
  if (currentScore == targetScore) {
    numbWins++;
@@ -81,11 +85,4 @@ function assesTheGame() {
 function resetYourScore() {
 
    $("yourscore").html("Your total score is " + currentScore);
-}
-function generateGemValue() {
-  var tempnum = Math.round(Math.random()*10);
-    if (tempnum == 0) {
-      tempnum = 1;
-     }
-     return(tempnum);
 }
