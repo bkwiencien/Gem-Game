@@ -1,3 +1,4 @@
+$(document).ready(function(){
 var targetScore = 0;
 var currentScore = 0;
 var numbWins = 0;
@@ -89,3 +90,4 @@ function generateGemValue() {
      }
      return(tempnum);
 }
+});
