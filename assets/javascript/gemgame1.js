@@ -26,15 +26,11 @@ $("#totalscore").html("Your total score is " + currentScore);
  setUpAllGems();
  resetYourScore();
  generateTargetScore();
- setUpData();
 }
 function setUpAllGems() {
   for (i=0;i<gemArray.length;i++) {
-    var tempnum = Math.round(Math.random()*10);
-    if (tempnum == 0) {
-      tempnum = 1;
-     }
-     gemArray[i].value = tempnum  % 13;
+     var valueOfGem = generateGemValue();
+     gemArray[i].value = valueOfGem;
      console.log(gemArray[i].name + "  has a value of " + gemArray[i].value);
 
   }
@@ -51,10 +47,25 @@ function generateTargetScore() {
     $("#target").html("target " + targetScore);
 
 }
-function process() {
-  console.log("in process");
-  console.log($(".selection"));
-}
+  $(".selection").on("click",function() {
+   var gemToProcess = $(this).attr("id");
+   //console.log("gemToProcess " + gemToProcess);
+   console.log(gemToProcess);
+   if (gemToProcess == "gem1") {
+     currentScore = currentScore + gem1.value;
+   }
+   if (gemToProcess == "gem2") {
+     currentScore = currentScore + gem2.value;
+   }
+   if (gemToProcess == "gem3") {
+     currentScore = currentScore + gem3.value;
+   }
+   if (gemToProcess == "gem4") {
+     currentScore = currentScore + gem4.value;
+   }
+   $("#totalscore").html("Your total score is " + currentScore);
+   assesTheGame()
+   });
 function process1() {
   currentScore = currentScore + gem1.value;
   $("#totalscore").html("Your total score is " + currentScore);
@@ -91,10 +102,10 @@ function resetYourScore() {
 
    $("yourscore").html("Your total score is " + currentScore);
 }
-function setUpData() {
-  //$("#gem").data("iam","gem1");
-  $("#gem").data("gem1","iam");
-  $("#gem").data("iam","gem2");
-  $("#gem").data("iam","gem3");
-  $("#gem").data("iam","gem4");
+function generateGemValue() {
+  var tempnum = Math.round(Math.random()*10);
+    if (tempnum == 0) {
+      tempnum = 1;
+     }
+     return(tempnum);
 }
