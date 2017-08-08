@@ -19,4 +19,11 @@ color: white;
 #imagesection{
 width: 29%;
 }
+#cc {
+   background-color: #8B4513;
+   width: 400px;
+   height: 100px;
+   color: white;
+   font-size: 60px;
+}
 
